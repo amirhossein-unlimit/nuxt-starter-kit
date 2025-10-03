@@ -1,0 +1,25 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - sharp
+  - vue-demi
+catalog:
+  '@antfu/eslint-config': ^5.4.1
+  '@nuxt/image': 1.11.0
+  '@nuxt/ui': 4.0.0
+  '@nuxtjs/robots': ^5.5.5
+  '@nuxtjs/sitemap': ^7.4.7
+  eslint: ^9.36.0
+  eslint-plugin-format: ^1.0.1
+  husky: ^9.1.7
+  lint-staged: ^16.2.1
+  nuxt: ^4.1.2
+  nuxt-link-checker: ^4.3.2
+  nuxt-schema-org: ^5.0.9
+  nuxt-seo-utils: ^7.0.17
+  nuxt-site-config: ^3.2.9
+  typescript: ^5.9.2
+  vue: ^3.5.21
+  vue-router: ^4.5.1
+  vue-tsc: ^3.0.8

@@ -1,0 +1,59 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "clean": "rm -rf .nuxt .data .output node_modules/.cache",
+    "commitlint": "commitlint --edit"
+  },
+  "dependencies": {
+    "@nuxt/image": "1.11.0",
+    "@nuxt/ui": "4.0.0",
+    "@nuxtjs/robots": "^5.5.5",
+    "@nuxtjs/sitemap": "^7.4.7",
+    "@tailwindcss/vite": "^4.1.13",
+    "nuxt": "^4.1.2",
+    "nuxt-link-checker": "^4.3.2",
+    "nuxt-schema-org": "^5.0.9",
+    "nuxt-seo-utils": "^7.0.17",
+    "nuxt-site-config": "^3.2.9",
+    "tailwindcss": "^4.1.13",
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.4.1",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-plugin-format": "^1.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.1",
+    "postcss-html": "1.8.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "stylelint": "^16.24.0",
+    "stylelint-config-recommended-vue": "1.6.1",
+    "stylelint-config-standard": "^39.0.0",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.8"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,vue}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  }
+}

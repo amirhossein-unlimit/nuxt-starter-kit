@@ -1,0 +1,46 @@
+/* ############## flex box ############## */
+@theme {
+  /* justify-content */
+  --justify-start: flex-start;
+  --justify-end: flex-end;
+  --justify-center: center;
+  --justify-between: space-between;
+  --justify-around: space-around;
+  --justify-evenly: space-evenly;
+  --justify-stretch: stretch;
+
+  /* align items */
+  --items-center: center;
+  --items-start: start;
+  --items-end: end;
+  --items-stretch: stretch;
+  --items-baseline: baseline;
+}
+
+@utility flex-row-* {
+  display: flex;
+  flex-direction: row;
+  justify-content: --value(--justify-*);
+  align-items: --modifier(--items-*, [*], center);
+}
+
+@utility flex-row-reverse-* {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: --value(--justify-*);
+  align-items: --modifier(--items-*, [*], center);
+}
+
+@utility flex-col-* {
+  display: flex;
+  flex-direction: column;
+  align-items: --value(--items-*);
+  justify-content: --modifier(--items-*, [*], center);
+}
+
+@utility flex-col-reverse-* {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: --value(--items-*);
+  justify-content: --modifier(--items-*, [*], center);
+}
