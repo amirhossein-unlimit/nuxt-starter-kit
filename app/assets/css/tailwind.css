@@ -10,6 +10,9 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
+
+  /* ############## Fonts ############## */
+  --font-iran-sans-x: 'IRANSansX';
 }
 
 @layer base {
