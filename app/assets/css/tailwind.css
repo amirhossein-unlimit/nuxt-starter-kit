@@ -1,6 +1,6 @@
-@import url('./utility.css');
 @import 'tailwindcss';
 @import '@nuxt/ui';
+@import './utility.css';
 
 @theme static {
   --breakpoint-2xs: 320px;

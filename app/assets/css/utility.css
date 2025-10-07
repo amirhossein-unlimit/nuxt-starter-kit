@@ -17,30 +17,30 @@
   --items-baseline: baseline;
 }
 
-@utility flex-row-* {
+@utility fr-* {
   display: flex;
   flex-direction: row;
   justify-content: --value(--justify-*);
-  align-items: --modifier(--items-*, [*], center);
+  align-items: --modifier(--items-*, [*]);
 }
 
-@utility flex-row-reverse-* {
+@utility frr-* {
   display: flex;
   flex-direction: row-reverse;
   justify-content: --value(--justify-*);
-  align-items: --modifier(--items-*, [*], center);
+  align-items: --modifier(--items-*, [*]);
 }
 
-@utility flex-col-* {
+@utility fc-* {
   display: flex;
   flex-direction: column;
-  align-items: --value(--items-*);
-  justify-content: --modifier(--items-*, [*], center);
+  justify-content: --value(--justify-*);
+  align-items: --modifier(--items-*, [*]);
 }
 
-@utility flex-col-reverse-* {
+@utility fcr-* {
   display: flex;
   flex-direction: column-reverse;
-  align-items: --value(--items-*);
-  justify-content: --modifier(--items-*, [*], center);
+  justify-content: --value(--justify-*);
+  align-items: --modifier(--items-*, [*]);
 }
