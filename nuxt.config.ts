@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
@@ -9,9 +8,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   vite: {
     plugins: [tailwindcss()],
-  },
-  alias: {
-    images: fileURLToPath(new URL('./assets/images', import.meta.url)),
   },
   ui: {
     theme: {
@@ -30,6 +26,7 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: 'none',
+    componentName: 'NuxtIcon',
     customCollections: [
       {
         prefix: 'custom',
@@ -37,5 +34,8 @@ export default defineNuxtConfig({
       },
     ],
     mode: 'svg',
+  },
+  image: {
+    dir: 'assets/images',
   },
 });
