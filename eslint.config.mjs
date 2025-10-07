@@ -53,6 +53,7 @@ export default antfu(
         message: 'Use NuxtLink instead.',
         selector: 'VElement[name=\'a\']',
       }],
+      'vue/custom-event-name-casing': ['error', 'camelCase'],
     },
     typescript: {
       tsconfigPath: 'tsconfig.json',

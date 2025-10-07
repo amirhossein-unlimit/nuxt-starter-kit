@@ -13,50 +13,29 @@ export default defineNuxtConfig({
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
   },
+  ui: {
+    theme: {
+      colors: ['primary', 'secondary', 'neutral'],
+    },
+  },
   fonts: {
     families: [
       {
-        name: 'IRANSansX',
+        name: 'IRANSansXFaNum',
         provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-LightD4.woff',
-        weight: 300,
-        style: 'normal',
-      },
-      {
-        name: 'IRANSansX',
-        provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-RegularD4.woff',
-        weight: 400,
-        style: 'normal',
-      },
-      {
-        name: 'IRANSansX',
-        provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-MediumD4.woff',
-        weight: 500,
-        style: 'normal',
-      },
-      {
-        name: 'IRANSansX',
-        provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-DemiBoldD4.woff',
-        weight: 600,
-        style: 'normal',
-      },
-      {
-        name: 'IRANSansX',
-        provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-BoldD4.woff',
-        weight: 700,
-        style: 'normal',
-      },
-      {
-        name: 'IRANSansX',
-        provider: 'local',
-        src: '/fonts/IRANSansX/woff/IRANSansXFaNum-ExtraBoldD4.woff',
-        weight: 800,
+        weights: [300, 400, 500, 600, 700, 800],
         style: 'normal',
       },
     ],
+  },
+  icon: {
+    provider: 'none',
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons',
+      },
+    ],
+    mode: 'svg',
   },
 });

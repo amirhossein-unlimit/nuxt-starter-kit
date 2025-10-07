@@ -1,6 +1,6 @@
-@import url('tailwind.css');
-@import url('utility.css');
-@import url('@nuxt/ui');
+@import url('./utility.css');
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 @theme static {
   --breakpoint-2xs: 320px;
@@ -11,8 +11,11 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
 
-  /* ############## Fonts ############## */
-  --font-iran-sans-x: 'IRANSansX';
+  /* ############## Fonts families ############## */
+
+  /* The IRANSansX font is loaded via the @nuxt/fonts module 
+   and there is no need to manually define @font-face */
+  --font-iran-sans-x: 'IRANSansXFaNum';
 }
 
 @layer base {
@@ -24,7 +27,7 @@
     * This isolates the element's children so their z-order is contained within this context,
     * preventing interference with elements outside. Useful for precise layering control
     * in complex components (e.g., modals, dropdowns, tooltips). 
-  */
+    */
     isolation: isolate;
   }
 

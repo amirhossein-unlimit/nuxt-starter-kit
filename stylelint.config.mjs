@@ -1,6 +1,6 @@
 /** @type {import("stylelint").Config} */
 export default {
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard', 'stylelint-config-tailwindcss'],
   overrides: [
     {
       files: ['*.vue', '**/*.vue'],
@@ -11,9 +11,6 @@ export default {
   ],
   rules: {
     'property-no-vendor-prefix': null,
-    'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['theme', 'utility'],
-    }],
     'selector-id-pattern': [
       '(^[a-z][a-z0-9-]*$)|(^__nuxt$)|(^__next$)',
       {
