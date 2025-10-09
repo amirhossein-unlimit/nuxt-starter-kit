@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import process from 'node:process';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
@@ -8,6 +8,11 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   vite: {
     plugins: [tailwindcss()],
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL,
+    },
   },
   ui: {
     theme: {
