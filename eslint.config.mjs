@@ -1,16 +1,14 @@
-import { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import antfu from '@antfu/eslint-config'
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import antfu from '@antfu/eslint-config';
 
 // Use __dirname because tsconfigRootDir must be an absolute directory path,
 // not a file:// URL or a file path (import.meta.resolve returns the wrong value).
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default antfu(
   {
-    ignores: [
-      '**/*.md',
-    ],
+    ignores: ['**/*.md'],
     rules: {
       'no-array-constructor': 'error',
       'no-confusing-arrow': 'error',
@@ -25,40 +23,66 @@ export default antfu(
       'no-useless-concat': 'error',
       'prefer-spread': 'error',
       'require-await': 'error',
-      'vue/block-lang': ['error', {
-        script: {
-          lang: 'ts',
+      'vue/block-lang': [
+        'error',
+        {
+          script: {
+            lang: 'ts',
+          },
         },
-      }],
-      'vue/block-order': ['error', {
-        order: ['script', 'template', 'style'],
-      }],
+      ],
+      'vue/block-order': [
+        'error',
+        {
+          order: ['script', 'template', 'style'],
+        },
+      ],
       'vue/component-api-style': ['error', ['script-setup']],
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/define-emits-declaration': ['error', 'type-based'],
-      'vue/define-macros-order': ['error', { defineExposeLast: true, order: ['defineOptions', 'defineModel', 'defineProps', 'defineEmits', 'defineSlots'] }],
+      'vue/define-macros-order': [
+        'error',
+        {
+          defineExposeLast: true,
+          order: [
+            'defineOptions',
+            'defineModel',
+            'defineProps',
+            'defineEmits',
+            'defineSlots',
+          ],
+        },
+      ],
       'vue/define-props-destructuring': ['error', { destructure: 'always' }],
       'vue/html-button-has-type': 'error',
       'vue/no-empty-component-block': 'off',
       'vue/no-ref-object-reactivity-loss': 'error',
       'vue/no-required-prop-with-default': ['error', { autofix: false }],
       'vue/no-unused-emit-declarations': 'error',
-      'vue/padding-line-between-tags': ['error', [{ blankLine: 'always', next: '*', prev: '*' }]],
+      'vue/padding-line-between-tags': [
+        'error',
+        [{ blankLine: 'always', next: '*', prev: '*' }],
+      ],
       'vue/prefer-define-options': 'error',
       'vue/prefer-true-attribute-shorthand': 'error',
       'vue/prefer-use-template-ref': 'error',
       'vue/require-prop-comment': 'error',
       'vue/sort-keys': 'off',
-      'vue/no-restricted-syntax': ['error', {
-        message: 'Use NuxtLink instead.',
-        selector: 'VElement[name=\'a\']',
-      }],
+      'vue/no-restricted-syntax': [
+        'error',
+        {
+          message: 'Use NuxtLink instead.',
+          selector: "VElement[name='a']",
+        },
+      ],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
     },
     typescript: {
       tsconfigPath: 'tsconfig.json',
     },
     vue: true,
+    stylistic: false,
+    formatters: false,
   },
   {
     files: ['**/*.ts'],
@@ -69,11 +93,14 @@ export default antfu(
       },
     },
     rules: {
-      'ts/dot-notation': ['error', {
-        allowIndexSignaturePropertyAccess: false,
-        allowPrivateClassPropertyAccess: false,
-        allowProtectedClassPropertyAccess: false,
-      }],
+      'ts/dot-notation': [
+        'error',
+        {
+          allowIndexSignaturePropertyAccess: false,
+          allowPrivateClassPropertyAccess: false,
+          allowProtectedClassPropertyAccess: false,
+        },
+      ],
       'ts/naming-convention': [
         'error',
         // Default: strictCamelCase for everything unless specified otherwise
@@ -122,7 +149,8 @@ export default antfu(
         {
           custom: {
             match: true,
-            regex: '^(get|set|is|has|can|should|will|did|was|are|were|fetch|load|save|delete|remove|add|update|create|build|make|generate|render|handle|process|validate|check|verify|calculate|compute|transform|convert|parse|format|init|setup|cleanup|destroy|toggle|show|hide|open|close|start|stop|begin|end|enable|disable|connect|disconnect|send|receive|emit|trigger|fire|dispatch|execute|run|call|invoke|use|scroll|go|navigate|debounce|throttle|clear|reset|restore|apply|mount|unmount|subscribe|unsubscribe|observe|watch|test|query|find|filter|map|reduce|sort|push|pop|shift|unshift|splice|slice|join|split|replace|match|search|write|read|list|count|sum|average|min|max|group|merge|combine|extract|inject|wrap|unwrap|bind|unbind|attach|detach|focus|blur|hover|click|submit|abort|cancel|retry|wait|delay|pause|resume|play|skip|seek).*',
+            regex:
+              '^(get|set|is|has|can|should|will|did|was|are|were|fetch|load|save|delete|remove|add|update|create|build|make|generate|render|handle|process|validate|check|verify|calculate|compute|transform|convert|parse|format|init|setup|cleanup|destroy|toggle|show|hide|open|close|start|stop|begin|end|enable|disable|connect|disconnect|send|receive|emit|trigger|fire|dispatch|execute|run|call|invoke|use|scroll|go|navigate|debounce|throttle|clear|reset|restore|apply|mount|unmount|subscribe|unsubscribe|observe|watch|test|query|find|filter|map|reduce|sort|push|pop|shift|unshift|splice|slice|join|split|replace|match|search|write|read|list|count|sum|average|min|max|group|merge|combine|extract|inject|wrap|unwrap|bind|unbind|attach|detach|focus|blur|hover|click|submit|abort|cancel|retry|wait|delay|pause|resume|play|skip|seek).*',
           },
           format: ['strictCamelCase'],
           selector: ['function', 'method'],
@@ -215,7 +243,11 @@ export default antfu(
             regex: '[-_.,:/ @]|[A-Z]{2,}',
           },
           format: null,
-          selector: ['objectLiteralProperty', 'objectLiteralMethod', 'typeProperty'],
+          selector: [
+            'objectLiteralProperty',
+            'objectLiteralMethod',
+            'typeProperty',
+          ],
         },
         // Destructured variables: keep original names
         {
@@ -263,4 +295,4 @@ export default antfu(
       'vue/multi-word-component-names': 'off',
     },
   },
-)
+);
