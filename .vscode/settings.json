@@ -1,5 +1,5 @@
 {
-  // Anable formatting and linting extensions
+  // Enable formatting and linting extensions
   "prettier.enable": true,
   "eslint.enable": true,
   "stylelint.enable": true,

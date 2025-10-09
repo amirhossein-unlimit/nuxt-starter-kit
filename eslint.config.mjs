@@ -3,15 +3,23 @@ import { fileURLToPath } from 'node:url';
 import antfu from '@antfu/eslint-config';
 
 // Use __dirname because tsconfigRootDir must be an absolute directory path,
-// not a file:// URL or a file path (import.meta.resolve returns the wrong value).
+// Not a file:// URL or a file path (import.meta.resolve returns the wrong value).
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default antfu(
   {
     ignores: ['**/*.md'],
     rules: {
+      'capitalized-comments': [
+        'error',
+        'always',
+        {
+          ignorePattern: 'pragma|ignored',
+          ignoreInlineComments: true,
+          ignoreConsecutiveComments: false,
+        },
+      ],
       'no-array-constructor': 'error',
-      'no-confusing-arrow': 'error',
       'no-console': 'warn',
       'no-else-return': 'error',
       'no-loop-func': 'error',
