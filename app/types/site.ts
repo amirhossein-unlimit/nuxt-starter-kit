@@ -18,7 +18,7 @@ export interface Site {
    * A short description for the site.
    * @type {string}
    */
-  description: string;
+  desc: string;
 
   /**
    * The physical address associated with the site.

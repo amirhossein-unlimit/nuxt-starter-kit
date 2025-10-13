@@ -1,5 +1,5 @@
 // TODO: change fake client routes with correct routes
-const client = {
+const clientRoutes = {
   home: '/',
   about: '/aboutus',
   contact: '/contactus',
@@ -45,62 +45,52 @@ const client = {
   },
 } as const;
 
-function apiPath(path: string) {
-  const apiPrefix = '/api/v1';
-  const base: string = useRuntimeConfig().public.apiUrl;
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return base + apiPrefix + cleanPath;
-}
-
 // TODO: change fake api routes with correct routes
-const api = {
+const createApiRoutes = (baseUrl: string) => ({
   user: {
-    login: apiPath('/user/login'),
-    signup: apiPath('/user/signup'),
+    login: `${baseUrl}/user/login`,
+    signup: `${baseUrl}/user/signup`,
     dashboard: {
-      notifications: apiPath('/user/dashboard/notifications'),
-      profile: apiPath('/user/dashboard/profile'),
+      notifications: `${baseUrl}/user/dashboard/notifications`,
+      profile: `${baseUrl}/user/dashboard/profile`,
     },
   },
 
   blog: {
-    index: apiPath('/blog'),
-    bySlug: (slug: string) => apiPath(`/blog/${slug}`),
+    index: `${baseUrl}/blog`,
+    bySlug: (slug: string) => `${baseUrl}/blog/${slug}`,
   },
 
   news: {
-    index: apiPath('/news'),
+    index: `${baseUrl}/news`,
 
     article: {
-      index: apiPath('/news/article'),
-      bySlug: (slug: string) => apiPath(`/news/article/${slug}`),
+      index: `${baseUrl}/news/article`,
+      bySlug: (slug: string) => `${baseUrl}/news/article/${slug}`,
     },
 
     category: {
-      index: apiPath('/news/category'),
-      bySlug: (slug: string) => apiPath(`/news/category/${slug}`),
+      index: `${baseUrl}/news/category`,
+      bySlug: (slug: string) => `${baseUrl}/news/category/${slug}`,
     },
 
     photo: {
-      index: apiPath('/news/photo'),
-      bySlug: (slug: string) => apiPath(`/news/photo/${slug}`),
+      index: `${baseUrl}/news/photo`,
+      bySlug: (slug: string) => `${baseUrl}/news/photo/${slug}`,
     },
 
     video: {
-      index: apiPath('/news/video'),
-      bySlug: (slug: string) => apiPath(`/news/video/${slug}`),
+      index: `${baseUrl}/news/video`,
+      bySlug: (slug: string) => `${baseUrl}/news/video/${slug}`,
     },
   },
 
   pages: {
-    home: apiPath('/page/home'),
-    about: apiPath('/page/aboutus'),
-    contact: apiPath('/page/contactus'),
-    search: apiPath('/page/search'),
+    home: `${baseUrl}/page/home`,
+    about: `${baseUrl}/page/aboutus`,
+    contact: `${baseUrl}/page/contactus`,
+    search: `${baseUrl}/page/search`,
   },
-} as const;
+});
 
-export default {
-  client,
-  api,
-};
+export { clientRoutes, createApiRoutes };

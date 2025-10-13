@@ -3,11 +3,10 @@ import type { Site } from '~/types/site';
 // TODO: change fake site config with currect data
 const site: Site = {
   name: 'نام سایت',
-  description:
-    'توضیحات ارائه شده هماره با لوگو که میتواند جهت توضیحات لوگو استفاده شود. این متن برای توضیحات لوگو است',
+  desc: 'توضیحات ارائه شده هماره با لوگو که میتواند جهت توضیحات لوگو استفاده شود. این متن برای توضیحات لوگو است',
   address: 'این قسمت آدرس شرکت است',
   credits: 'تمام حقوق مادی و معنوی این وبسایت محفوط است',
-  logo: '',
+  logo: '/logos/nuxt-green-white.svg',
   phone: '+989910979727',
   socials: [
     {
@@ -33,4 +32,4 @@ const site: Site = {
   ],
 };
 
-export default site;
+export { site };

@@ -1,5 +1,5 @@
 import type { Site } from '~/types/site';
-import site from '~/constants/site.config';
+import { site } from '~/constants/site.config';
 
 function useConfig() {
   const { data: userConfig } = useNuxtData<Partial<Site>>('config');

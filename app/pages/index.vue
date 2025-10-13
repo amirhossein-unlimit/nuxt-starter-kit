@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { logo } = useAppConfig().site;
+</script>
 
 <template>
   <div
@@ -6,7 +8,7 @@
     class="container mx-auto fc-center/center min-h-screen gap-6 px-4 font-iran-sans-x md:frr-center/center"
   >
     <div class="fc-center/center gap-2.5">
-      <NuxtImg src="/logos/nuxt-green-white.svg" width="250" />
+      <NuxtImg :src="logo" width="250" />
 
       <h1 class="w-full text-center text-xl font-bold text-wrap">
         پروژه nuxt starter kit آماده استفاده است 😃

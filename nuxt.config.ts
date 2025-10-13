@@ -9,6 +9,14 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  typescript: {
+    typeCheck: true,
+    tsConfig: {
+      compilerOptions: {
+        noUncheckedIndexedAccess: true,
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       apiUrl: process.env.NUXT_PUBLIC_API_URL,
