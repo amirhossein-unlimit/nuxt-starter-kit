@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   typescript: {
-    typeCheck: true,
     tsConfig: {
       compilerOptions: {
         noUncheckedIndexedAccess: true,

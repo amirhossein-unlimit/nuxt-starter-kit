@@ -47,6 +47,10 @@ const clientRoutes = {
 
 // TODO: change fake api routes with correct routes
 const createApiRoutes = (baseUrl: string) => ({
+  site: {
+    config: `${baseUrl}/site/config`,
+  },
+
   user: {
     login: `${baseUrl}/user/login`,
     signup: `${baseUrl}/user/signup`,
