@@ -1,5 +1,4 @@
 import type { Site } from '~/types/site';
-// Default (fallback) site settings used if the API request fails
 import { site } from '~/constants/site.config';
 
 export default defineNuxtPlugin({
