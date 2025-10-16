@@ -1,4 +1,4 @@
-import { site } from '@/constants/site.config';
+import { site } from '~/constants/site.config';
 
 export default defineAppConfig({
   site,

@@ -1,5 +1,5 @@
 import type { Site } from '~/types/site';
-import { site } from '~/constants/site.config';
+import { site as defaultConfig } from '~/constants/site.config';
 
 export default defineNuxtPlugin({
   name: 'setupConfig',
@@ -7,15 +7,14 @@ export default defineNuxtPlugin({
   async setup() {
     const { apiRoutes } = useAppRoutes();
 
-    // Create a global reactive state to store site settings
-    const settings = useState('site-settings', () => site);
-
     try {
-      const { data } = await useFetch<Site>(apiRoutes.site.config);
+      const { data: userConfig } = await useFetch<Site>(apiRoutes.site.config, {
+        key: 'site-config',
+      });
 
-      // If server data exists, merge it with the default settings
-      if (data.value) {
-        settings.value = { ...site, ...data.value };
+      // If server data exists, merge it with the default config
+      if (userConfig.value) {
+        updateAppConfig({ site: { ...defaultConfig, ...userConfig.value } });
       }
     } catch (error) {
       console.error(error);

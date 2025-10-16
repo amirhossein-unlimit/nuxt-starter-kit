@@ -48,7 +48,8 @@ const clientRoutes = {
 // TODO: change fake api routes with correct routes
 const createApiRoutes = (baseUrl: string) => ({
   site: {
-    config: `${baseUrl}/site/settings`,
+    // Optional endpoint – falls the config isn't fetched, default settings will be used.
+    config: `${baseUrl}/site/config`,
   },
 
   user: {
