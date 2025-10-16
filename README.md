@@ -1,19 +1,27 @@
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://nuxt.com/assets/design-kit/logo-green-white.svg" alt="Nuxt logo" width="200" style="background: #0D1117; padding: 16px">
+   <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://nuxt.com/assets/design-kit/logo-green-white.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://nuxt.com/assets/design-kit/logo-green-black.svg">
+      <img src="https://nuxt.com/assets/design-kit/logo-green-white.svg" alt="Nuxt logo" width="200">
+   </picture>
   </a>
   <p align="center">
-    این ریپازیتوری یک شروع کننده پروژه با فریم‌وورک Nuxt است
+    A starter template for Nuxt projects.
   </p>
 </div>
 
-## درباره پروژه
+## About the project
 
-این پروژه یک Starter Kit بر پایه‌ی <a href="https://nuxt.com" target="_blank">Nuxt 4↗</a> است که با هدف سرعت‌بخشیدن به شروع توسعه‌ی اپلیکیشن‌های وب ایجاد شده است. در این کیت، ساختار اولیه پروژه به‌صورت بهینه‌سازی‌شده پیاده‌سازی شده تا شما بتوانید بدون نیاز به تنظیمات وقت‌گیر، به‌سرعت بر روی توسعه ویژگی‌های اصلی تمرکز کنید.
+This project is a **Starter Kit** based on
+<a href="https://nuxt.com" target="_blank">Nuxt 4↗</a>, created with the goal
+of accelerating the development of web applications. It provides an optimized
+initial project structure, allowing you to focus on building core features
+quickly — without spending time on complex setup and configuration.
 
-## تکنولوژی ها
+## Build with
 
-تکنولوژی های مورد استفاده در این پروژه عبارت‌اند از:
+The technologies used in this project are:
 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS](https://img.shields.io/badge/CSS-639.svg?style=for-the-badge&logo=css&logoColor=fff)
@@ -26,33 +34,26 @@
 - ![Commitlint](https://img.shields.io/badge/commitlint-000.svg?style=for-the-badge&logo=commitlint)
 - ![prettier](https://img.shields.io/badge/prettier-1A2C34.svg?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
 - ![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
-- ![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=vsc&logoColor=white)
 
-## راه‌اندازی پروژه
+## Installation and setup
 
-1. کلون گرفتن
+1. Clone project
    ```bash
-   git clone https://github.com/amirhossein-unlimit/university
+   git clone https://github.com/amirhossein-unlimit/nuxt-starter-kit
    ```
-2. نصب وابستگی ها
+2. Install dependencies
    ```bash
    pnpm install
    ```
-3. اجرای پروژه در حالت توسعه
+3. Run in development mode
    ```bash
    pnpm dev
    ```
-4. ساخت پروژه
+4. Build project
    ```bash
    pnpm build
    ```
-5. پیش‌نمایش نهایی پروژه
+5. Preview the Built Application
    ```bash
    pnpm run preview
    ```
-
-## تماس
-
-امیرحسین عظیمی
-
-[@amirhossein_unlimit](https://t.me/amirhossein_unlimit) - [amirhossein.unlimited@gmail.com](mailto:amirhossein.unlimited@gmail.com)
