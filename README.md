@@ -1,11 +1,9 @@
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-   <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://nuxt.com/assets/design-kit/logo-green-white.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://nuxt.com/assets/design-kit/logo-green-black.svg">
-      <img src="https://nuxt.com/assets/design-kit/logo-green-white.svg" alt="Nuxt logo" width="200">
-   </picture>
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://nuxt.com/assets/design-kit/logo-green-white.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://nuxt.com/assets/design-kit/logo-green-black.svg">
+    <img src="https://nuxt.com/assets/design-kit/logo-green-white.svg" alt="Nuxt logo" width="200">
+  </picture>
   <p align="center">
     A starter template for Nuxt projects.
   </p>
