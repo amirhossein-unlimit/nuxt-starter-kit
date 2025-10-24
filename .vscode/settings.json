@@ -1,14 +1,13 @@
 {
-  // Enable formatting and linting extensions
-  "prettier.enable": true,
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Enable ESLint and Stylelint for code and style linting
   "eslint.enable": true,
   "stylelint.enable": true,
 
-  // Format files with prettier
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  // Enable Stylelint with custom config
+  // Specify the Stylelint config file
   "stylelint.configFile": "stylelint.config.mjs",
 
   // Auto fix
@@ -21,6 +20,7 @@
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
+    { "rule": "vue/padding-*", "severity": "off", "fixable": true },
     { "rule": "*-indent", "severity": "off", "fixable": true },
     { "rule": "*-spacing", "severity": "off", "fixable": true },
     { "rule": "*-spaces", "severity": "off", "fixable": true },

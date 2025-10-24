@@ -1,6 +1,7 @@
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import antfu from '@antfu/eslint-config';
+import tailwind from 'eslint-plugin-tailwindcss';
 
 // Use __dirname because tsconfigRootDir must be an absolute directory path,
 // Not a file:// URL or a file path (import.meta.resolve returns the wrong value).
@@ -80,17 +81,20 @@ export default antfu(
         'error',
         {
           message: 'Use NuxtLink instead.',
-          selector: "VElement[name='a']",
+          selector: 'VElement[name=\'a\']',
         },
       ],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
+      'vue/multi-word-component-names': 'off',
     },
     typescript: {
       tsconfigPath: 'tsconfig.json',
     },
     vue: true,
-    stylistic: false,
-    formatters: false,
+    stylistic: {
+      semi: true,
+    },
+    formatters: true,
   },
   {
     files: ['**/*.ts'],
@@ -297,10 +301,15 @@ export default antfu(
       'ts/consistent-type-assertions': ['error', { assertionStyle: 'never' }],
     },
   },
-  {
-    files: ['./app/components/**/*.vue'],
-    rules: {
-      'vue/multi-word-component-names': 'off',
+  [
+    // ESLint plugin to validate Tailwind CSS classes
+    ...tailwind.configs['flat/recommended'],
+    {
+      settings: {
+        tailwindcss: {
+          config: `${__dirname}/app/assets/css/tailwind.css`,
+        },
+      },
     },
-  },
+  ],
 );
