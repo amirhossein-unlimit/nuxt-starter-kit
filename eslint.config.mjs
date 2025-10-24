@@ -9,7 +9,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default antfu(
   {
-    ignores: ['**/*.md'],
     rules: {
       'capitalized-comments': [
         'error',
