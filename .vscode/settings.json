@@ -7,9 +7,6 @@
   "eslint.enable": true,
   "stylelint.enable": true,
 
-  // Specify the Stylelint config file
-  "stylelint.configFile": "stylelint.config.mjs",
-
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -45,17 +42,20 @@
     "yaml"
   ],
 
-  // Enable stylelint for all style format
+  // Enable Stylelint for CSS and Vue files
   "stylelint.validate": ["css", "vue"],
 
   // VSCode settings for Tailwind CSS IntelliSense with Nuxt UI support
   "files.associations": {
     "*.css": "tailwindcss"
   },
+
   "editor.quickSuggestions": {
     "strings": "on"
   },
+
   "tailwindCSS.classAttributes": ["class", "ui"],
+
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ]

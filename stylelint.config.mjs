@@ -1,14 +1,7 @@
 /** @type {import("stylelint").Config} */
+
 export default {
-  extends: ['stylelint-config-standard', 'stylelint-config-tailwindcss'],
-  overrides: [
-    {
-      files: ['*.vue', '**/*.vue'],
-      extends: [
-        'stylelint-config-recommended-vue',
-      ],
-    },
-  ],
+  extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue', '@culur/config-stylelint/tailwind4'],
   rules: {
     'property-no-vendor-prefix': null,
     'selector-id-pattern': [
@@ -25,4 +18,4 @@ export default {
     '.nuxt/**',
     '**/*.{js,ts,mjs,mts}',
   ],
-}
+};
