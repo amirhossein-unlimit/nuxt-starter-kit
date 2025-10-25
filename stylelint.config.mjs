@@ -11,11 +11,4 @@ export default {
       },
     ],
   },
-  ignoreFiles: [
-    '**/node_modules/**',
-    'dist/**',
-    'build/**',
-    '.nuxt/**',
-    '**/*.{js,ts,mjs,mts}',
-  ],
 };
