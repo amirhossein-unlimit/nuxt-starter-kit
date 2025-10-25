@@ -13,7 +13,11 @@
     "typecheck": "nuxt typecheck",
     "prepare": "husky",
     "clean": "rm -rf .nuxt .data .output node_modules/.cache",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "lint:js": "eslint --cache .",
+    "lint:style": "stylelint --cache --allow-empty-input 'app/**/*.{css,vue}'",
+    "fix:js": "eslint --cache --fix .",
+    "fix:style": "stylelint --cache --allow-empty-input --fix 'app/**/*.{css,vue}'"
   },
   "dependencies": {
     "@nuxt/image": "1.11.0",
