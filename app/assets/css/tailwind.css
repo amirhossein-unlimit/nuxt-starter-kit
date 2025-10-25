@@ -3,7 +3,6 @@
 @import './utility.css';
 
 @theme static {
-  --breakpoint-2xs: 320px;
   --breakpoint-xs: 480px;
   --breakpoint-sm: 600px;
   --breakpoint-md: 768px;
@@ -13,7 +12,7 @@
 
   /* ############## Fonts families ############## */
 
-  /* The IRANSansX font is loaded via the @nuxt/fonts module 
+  /* The IRANSansX font is loaded via the @nuxt/fonts module
    and there is no need to manually define @font-face */
   --font-iran-sans-x: 'IRANSansXFaNum';
 }
@@ -23,10 +22,10 @@
   #root,
   #__next,
   #__nuxt {
-    /* 
+    /*
     * This isolates the element's children so their z-order is contained within this context,
     * preventing interference with elements outside. Useful for precise layering control
-    * in complex components (e.g., modals, dropdowns, tooltips). 
+    * in complex components (e.g., modals, dropdowns, tooltips).
     */
     isolation: isolate;
   }
@@ -43,35 +42,19 @@
     hanging-punctuation: first allow-end last;
   }
 
-  /* Disable smooth scrolling for users who prefer reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
-
-  /* Enable smooth scroll and view transitions for users without motion preference */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
-      scroll-behavior: smooth;
-    }
-  }
-
   body {
-    /* Render text faster (may reduce precision in kerning/ligatures) */
-    text-rendering: optimizespeed;
-
-    /* Control how character connections (ligatures) are shown:
-     keep common & contextual ones, disable fancy/rare ones */
-    font-variant-ligatures: common-ligatures no-discretionary-ligatures
-      no-historical-ligatures contextual;
+    /* Scale font details (strokes, shapes) based on font size for clearer text */
+    font-optical-sizing: auto;
 
     /* Adjust spacing between letters automatically for better readability */
     font-kerning: normal;
 
-    /* Scale font details (strokes, shapes) based on font size for clearer text */
-    font-optical-sizing: auto;
+    /* Control how character connections (ligatures) are shown:
+     keep common & contextual ones, disable fancy/rare ones */
+    font-variant-ligatures: common-ligatures no-discretionary-ligatures no-historical-ligatures contextual;
+
+    /* Render text faster (may reduce precision in kerning/ligatures) */
+    text-rendering: optimizespeed;
   }
 
   h1,
@@ -84,11 +67,27 @@
   }
 
   :where(p, li, dd) {
-    overflow-wrap: break-word;
     text-wrap: pretty;
+    overflow-wrap: break-word;
   }
 
   :where(label) {
     display: block;
+  }
+
+  /* Disable smooth scrolling for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Enable smooth scroll and view transitions for users without motion preference */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+
+      interpolate-size: allow-keywords;
+    }
   }
 }
