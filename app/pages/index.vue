@@ -3,7 +3,9 @@ const { logo } = useAppConfig().site;
 </script>
 
 <template>
-  <div class="container mx-auto fc-center/center min-h-screen gap-6 px-4 font-iran-sans-x md:fr-center/center">
+  <div
+    class="container mx-auto fc-center/center min-h-screen gap-6 px-4 font-iran-sans-x md:fr-center/center"
+  >
     <div class="fc-center/center gap-2.5">
       <NuxtImg width="250" :src="logo" alt="nuxt logo" />
 
@@ -18,9 +20,7 @@ const { logo } = useAppConfig().site;
           <NuxtIcon name="i-custom-image" class="fill-transparent text-white" :size="24" />
         </button>
 
-        <p class="text-gray-300">
-          The icons are located at /app/assets/icons.
-        </p>
+        <p class="text-gray-300">The icons are located at /app/assets/icons.</p>
       </li>
 
       <li class="fr-start/center gap-2 rounded-lg border border-primary bg-primary/5 p-2">
@@ -29,8 +29,7 @@ const { logo } = useAppConfig().site;
         </button>
 
         <p class="text-gray-300">
-          The fonts are placed in the public directory to be recognized by the
-          @nuxt/fonts module.
+          The fonts are placed in the public directory to be recognized by the @nuxt/fonts module.
         </p>
       </li>
 
