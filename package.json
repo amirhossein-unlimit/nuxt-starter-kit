@@ -47,6 +47,7 @@
     "lint-staged": "^16.2.4",
     "postcss-html": "1.8.0",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "^16.25.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-standard": "^39.0.1",
@@ -55,11 +56,13 @@
     "vue-tsc": "^3.1.1"
   },
   "lint-staged": {
-    "*": [
-      "eslint --fix"
+    "*.{js,mjs,ts,mts,vue,json,md,yaml}": [
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.{css,vue}": [
-      "stylelint --fix"
+      "stylelint --fix",
+      "prettier --write"
     ]
   }
 }

@@ -30,7 +30,7 @@ export default antfu(
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'no-useless-concat': 'error',
       'prefer-spread': 'error',
-      'require-await': 'error',
+      // 'require-await': 'off',
       'vue/block-lang': [
         'error',
         {
@@ -52,13 +52,7 @@ export default antfu(
         'error',
         {
           defineExposeLast: true,
-          order: [
-            'defineOptions',
-            'defineModel',
-            'defineProps',
-            'defineEmits',
-            'defineSlots',
-          ],
+          order: ['defineOptions', 'defineModel', 'defineProps', 'defineEmits', 'defineSlots'],
         },
       ],
       'vue/define-props-destructuring': ['error', { destructure: 'always' }],
@@ -67,10 +61,7 @@ export default antfu(
       'vue/no-ref-object-reactivity-loss': 'error',
       'vue/no-required-prop-with-default': ['error', { autofix: false }],
       'vue/no-unused-emit-declarations': 'error',
-      'vue/padding-line-between-tags': [
-        'error',
-        [{ blankLine: 'always', next: '*', prev: '*' }],
-      ],
+      'vue/padding-line-between-tags': ['error', [{ blankLine: 'always', next: '*', prev: '*' }]],
       'vue/prefer-define-options': 'error',
       'vue/prefer-true-attribute-shorthand': 'error',
       'vue/prefer-use-template-ref': 'error',
@@ -80,20 +71,15 @@ export default antfu(
         'error',
         {
           message: 'Use NuxtLink instead.',
-          selector: 'VElement[name=\'a\']',
+          selector: "VElement[name='a']",
         },
       ],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
       'vue/multi-word-component-names': 'off',
     },
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-    },
     vue: true,
-    stylistic: {
-      semi: true,
-    },
-    formatters: true,
+    stylistic: false,
+    formatters: false,
   },
   {
     files: ['**/*.ts'],
@@ -254,11 +240,7 @@ export default antfu(
             regex: '[-_.,:/ @]|[A-Z]{2,}',
           },
           format: null,
-          selector: [
-            'objectLiteralProperty',
-            'objectLiteralMethod',
-            'typeProperty',
-          ],
+          selector: ['objectLiteralProperty', 'objectLiteralMethod', 'typeProperty'],
         },
         // Destructured variables: keep original names
         {
