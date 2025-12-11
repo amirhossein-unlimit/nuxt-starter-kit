@@ -10,15 +10,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default antfu(
   {
     rules: {
-      'capitalized-comments': [
-        'error',
-        'always',
-        {
-          ignorePattern: 'pragma|ignored',
-          ignoreInlineComments: true,
-          ignoreConsecutiveComments: false,
-        },
-      ],
       'no-array-constructor': 'error',
       'no-console': 'warn',
       'no-else-return': 'error',
@@ -30,7 +21,7 @@ export default antfu(
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'no-useless-concat': 'error',
       'prefer-spread': 'error',
-      'require-await': 'error',
+      'require-await': 'off',
       'vue/block-lang': [
         'error',
         {
@@ -293,6 +284,16 @@ export default antfu(
           leadingUnderscore: 'allow',
           modifiers: ['const'],
           selector: 'variable',
+        },
+        // Allow UPPER_CASE only for constants
+        {
+          selector: 'variable',
+          modifiers: ['const'],
+          filter: {
+            regex: '^[A-Z_]+$',
+            match: true,
+          },
+          format: ['UPPER_CASE'],
         },
       ],
       'ts/no-floating-promises': 'error',
