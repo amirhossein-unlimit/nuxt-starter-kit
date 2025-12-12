@@ -22,11 +22,6 @@ export default defineNuxtConfig({
       apiSuffix: process.env.NUXT_PUBLIC_API_SUFFIX,
     },
   },
-  ui: {
-    theme: {
-      colors: ['primary', 'secondary', 'neutral'],
-    },
-  },
   fonts: {
     families: [
       {
