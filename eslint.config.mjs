@@ -88,12 +88,6 @@ export default antfu(
   },
   {
     files: ['**/*.ts'],
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: __dirname,
-      },
-    },
     rules: {
       'ts/dot-notation': [
         'error',
