@@ -30,6 +30,6 @@ const site: Site = {
       name: 'eitaa',
     },
   ],
-};
+} as const;
 
 export { site };
