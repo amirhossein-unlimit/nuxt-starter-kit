@@ -43,6 +43,12 @@ const { logo } = useAppConfig().site;
           The project’s constant configurations are located at /app/constants.
         </p>
       </li>
+
+      <li class="fr-start/center rounded-lg border border-primary bg-primary/5 p-2">
+        <p class="text-gray-300">
+          You can use the api.ts plugin in the project to send your requests.
+        </p>
+      </li>
     </ul>
   </div>
 </template>
