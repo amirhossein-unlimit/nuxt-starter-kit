@@ -3,7 +3,7 @@ const { logo } = useAppConfig().site;
 </script>
 
 <template>
-  <div class="container mx-auto fc-center/center min-h-screen gap-6 px-4 font-iran-sans-x md:fr-center/center">
+  <div class="container mx-auto fc-center/center min-h-screen gap-6 px-4 font-arad md:fr-center/center">
     <div class="fc-center/center gap-2.5">
       <NuxtImg width="250" :src="logo" alt="nuxt logo" />
 

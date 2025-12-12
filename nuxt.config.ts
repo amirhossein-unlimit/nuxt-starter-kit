@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: 'IRANSansXFaNum',
+        name: 'AradVF',
         provider: 'local',
         weights: [300, 400, 500, 600, 700, 800],
         style: 'normal',

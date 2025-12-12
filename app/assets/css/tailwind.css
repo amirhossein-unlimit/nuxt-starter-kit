@@ -14,7 +14,7 @@
 
   /* The IRANSansX font is loaded via the @nuxt/fonts module
    and there is no need to manually define @font-face */
-  --font-iran-sans-x: 'IRANSansXFaNum';
+  --font-arad: 'AradVF';
 }
 
 @layer base {
