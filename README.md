@@ -25,7 +25,7 @@ quickly — without spending time on complex setup and configuration.
 - **ESLint** — JavaScript and Vue files linting with ESLint
 - **Stylelint** — CSS and Vue `<style>` blocks linting with Stylelint
 - **App Config** — Base site configuration in `app.config.ts`
-- **useAppRoutes** — Composable for easy access to API and client routes
+- **Api plugin** — For unified and streamlined API requests.
 
 ## Build with
 
